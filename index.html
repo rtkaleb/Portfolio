@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Iván Kaleb Ramírez Torres — Java Full Stack Jr. Developer portfolio: skills, experience, projects and contact." id="meta-description" />
+  <title id="page-title">Iván Kaleb Ramírez Torres – Full Stack Jr. Developer</title>
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Own stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!--==================== HEADER ====================-->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="nav__logo">Kaleb Torres</a>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list grid">
+          <li><a href="#home"          class="nav__link active-link"><i class="bx bx-home"></i><span data-i18n="nav.home">Home</span></a></li>
+          <li><a href="#skills"        class="nav__link"><i class="bx bx-code-alt"></i><span data-i18n="nav.skills">Skills</span></a></li>
+          <li><a href="#qualification" class="nav__link"><i class="bx bx-book"></i><span data-i18n="nav.credentials">Credentials</span></a></li>
+          <li><a href="#services"      class="nav__link"><i class="bx bx-briefcase"></i><span data-i18n="nav.services">Services</span></a></li>
+          <li><a href="#projects"      class="nav__link"><i class="bx bx-folder"></i><span data-i18n="nav.projects">Projects</span></a></li>
+          <li><a href="#contact"       class="nav__link"><i class="bx bx-message-square-detail"></i><span data-i18n="nav.contact">Contact</span></a></li>
+        </ul>
+        <i class="bx bx-x nav__close" id="nav-close" role="button" tabindex="0" data-i18n-aria-label="nav.closeMenuAria" aria-label="Close menu"></i>
+      </div>
+
+      <div class="nav__buttons">
+        <button class="lang-toggle" id="lang-button" type="button" data-i18n-aria-label="nav.toggleLangAria" aria-label="Switch language">ES</button>
+        <i class="bx bx-moon change-theme" id="theme-button" role="button" tabindex="0" data-i18n-title="nav.toggleTheme" title="Toggle theme" data-i18n-aria-label="nav.toggleThemeAria" aria-label="Toggle dark/light theme"></i>
+        <i class="bx bx-menu nav__toggle" id="nav-toggle" role="button" tabindex="0" data-i18n-aria-label="nav.openMenuAria" aria-label="Open menu"></i>
+      </div>
+    </nav>
+  </header>
+
+  <!--==================== MAIN ====================-->
+  <main class="main">
+
+    <!--==================== HOME ====================-->
+    <section class="home section section__border" id="home">
+      <div class="home__container container grid">
+
+        <!-- Name + role: always full-width and centered so long names
+             never get squeezed into a narrow column and wrap badly. -->
+        <div class="home__heading">
+          <h1 class="home__title" data-i18n="home.title">Hello, My name is Kaleb</h1>
+          <!--
+            data-text holds the full sentence; main.js types it out
+            character by character into this span on page load, and
+            re-reads it from the translations dictionary on language switch.
+          -->
+          <span class="home__subtitle" id="typing-subtitle" data-i18n-text="home.subtitle" data-text="Java Full Stack Jr. Developer"><span class="typing-cursor"></span></span>
+        </div>
+
+        <!-- Bio/contact (left) · photo (center) · stats (right) -->
+        <div class="home__row">
+
+          <div class="home__info reveal">
+            <div>
+              <span class="home__info-title" data-i18n="home.bio.title">Biography</span>
+              <p class="home__info-description" data-i18n="home.bio.description">
+                Bilingual Full Stack Jr. developer with a PhD in science and a background in software architecture, QA and backend development.
+              </p>
+            </div>
+            <div>
+              <span class="home__info-title" data-i18n="home.contact.title">Contact</span>
+              <p class="home__info-description" data-i18n="home.contact.description">
+                Mexico City<br>
+                rtkaleb@gmail.com<br>
+                +52 55 6708 8820
+              </p>
+            </div>
+            <div>
+              <span class="home__info-title" data-i18n="home.services.title">Services</span>
+              <p class="home__info-description" data-i18n="home.services.description">
+                - Backend development <br>
+                - Frontend development <br>
+                - REST APIs <br>
+                - Integrations <br>
+                - Testing and QA <br>
+              </p>
+            </div>
+          </div>
+
+          <div class="home__photo">
+            <div class="home__blob">
+              <div class="home__perfil">
+                <img src="images/KalebTorres.png" alt="Kaleb Torres Portrait" loading="lazy" />
+              </div>
+
+              <!-- Decorative shapes -->
+              <svg class="home__shape-wawes" viewBox="0 0 50 200" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 10 0 Q 40 50 10 100 Q -20 150 10 200" stroke="currentColor" stroke-width="3" fill="none"/>
+              </svg>
+              <svg class="home__shape-circle" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="75" cy="75" r="60" stroke="currentColor" stroke-width="3" fill="none"/>
+                <circle cx="75" cy="75" r="40" stroke="currentColor" stroke-width="2" fill="none"/>
+              </svg>
+            </div>
+
+            <div class="home__social">
+              <a href="https://www.linkedin.com/in/kaleb-torres/" target="_blank" rel="noopener noreferrer" class="home__social-link" data-i18n-aria-label="home.social.linkedinAria" aria-label="LinkedIn profile">
+                <i class="bx bxl-linkedin"></i>
+              </a>
+              <a href="https://github.com/rtkaleb" target="_blank" rel="noopener noreferrer" class="home__social-link" data-i18n-aria-label="home.social.githubAria" aria-label="GitHub profile">
+                <i class="bx bxl-github"></i>
+              </a>
+              <a href="Kaleb-Torres-Resume.pdf" target="_blank" rel="noopener noreferrer" class="home__social-link" data-i18n-aria-label="home.social.resumeAria" aria-label="Download my resume (PDF)">
+                <i class="bx bxs-file-pdf"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="home__stats reveal">
+            <div>
+              <span class="home__info-title" data-i18n="home.stats.years">Years of experience</span>
+              <!-- data-count is the target number main.js counts up to; data-suffix is appended after ("+" or ""). -->
+              <h3 class="home__info-number" data-count="2" data-suffix="+">00+</h3>
+            </div>
+            <div>
+              <span class="home__info-title" data-i18n="home.stats.projects">Completed projects</span>
+              <h3 class="home__info-number" data-count="6" data-suffix="+">00+</h3>
+            </div>
+            <div>
+              <span class="home__info-title" data-i18n="home.stats.companies">Companies / teams</span>
+              <h3 class="home__info-number" data-count="3" data-suffix="+">00+</h3>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!--==================== SKILLS ====================-->
+    <section class="skills section section__border" id="skills">
+      <h2 class="section__title reveal" data-i18n="skills.title">Skills</h2>
+      <span class="section__subtitle reveal" data-i18n="skills.subtitle">My favorite technologies</span>
+
+      <div class="skills__container container grid">
+
+        <!-- Backend -->
+        <div class="reveal">
+          <div class="skills__title">
+            <i class="bx bx-server"></i>
+            <span data-i18n="skills.backend">Backend</span>
+          </div>
+          <div class="skills__info grid">
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" loading="lazy" />
+              </div>
+              <span class="skills__name">Java</span>
+              <span class="skills__subtitle" data-i18n="level.advanced">Advanced</span>
+              <div class="skills__bar"><span class="skills__bar-fill" data-level="90"></span></div>
+            </div>
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" loading="lazy" />
+              </div>
+              <span class="skills__name">Spring Boot</span>
+              <span class="skills__subtitle" data-i18n="level.intermediate">Intermediate</span>
+              <div class="skills__bar"><span class="skills__bar-fill" data-level="65"></span></div>
+            </div>
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" loading="lazy" />
+              </div>
+              <span class="skills__name">Node.js</span>
+              <span class="skills__subtitle" data-i18n="level.intermediate">Intermediate</span>
+              <div class="skills__bar"><span class="skills__bar-fill" data-level="65"></span></div>
+            </div>
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" class="skills__icon--invert" loading="lazy" />
+              </div>
+              <span class="skills__name">Express</span>
+              <span class="skills__subtitle" data-i18n="level.intermediate">Intermediate</span>
+              <div class="skills__bar"><span class="skills__bar-fill" data-level="65"></span></div>
+            </div>
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" loading="lazy" />
+              </div>
+              <span class="skills__name">MongoDB</span>
+              <span class="skills__subtitle" data-i18n="level.intermediate">Intermediate</span>
+              <div class="skills__bar"><span class="skills__bar-fill" data-level="65"></span></div>
+            </div>
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" loading="lazy" />
+              </div>
+              <span class="skills__name">SQL</span>
+              <span class="skills__subtitle" data-i18n="level.intermediate">Intermediate</span>
+              <div class="skills__bar"><span class="skills__bar-fill" data-level="65"></span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend & Tools -->
+        <div class="reveal">
+          <div class="skills__title">
+            <i class="bx bx-layout"></i>
+            <span data-i18n="skills.frontendTools">Frontend &amp; Tools</span>
+          </div>
+          <div class="skills__info grid">
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy" />
+              </div>
+              <span class="skills__name">JavaScript</span>
+              <span class="skills__subtitle" data-i18n="level.advanced">Advanced</span>
+              <div class="skills__bar"><span class="skills__bar-fill" data-level="90"></span></div>
+            </div>
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" loading="lazy" />
+              </div>
+              <span class="skills__name">React</span>
+              <span class="skills__subtitle" data-i18n="level.intermediate">Intermediate</span>
+              <div class="skills__bar"><span class="skills__bar-fill" data-level="65"></span></div>
+            </div>
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" loading="lazy" />
+              </div>
+              <span class="skills__name">HTML</span>
+              <span class="skills__subtitle" data-i18n="level.advanced">Advanced</span>
+              <div class="skills__bar"><span class="skills__bar-fill" data-level="90"></span></div>
+            </div>
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" loading="lazy" />
+              </div>
+              <span class="skills__name">CSS</span>
+              <span class="skills__subtitle" data-i18n="level.advanced">Advanced</span>
+              <div class="skills__bar"><span class="skills__bar-fill" data-level="90"></span></div>
+            </div>
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" loading="lazy" />
+              </div>
+              <span class="skills__name">Git</span>
+              <span class="skills__subtitle" data-i18n="level.advanced">Advanced</span>
+              <div class="skills__bar"><span class="skills__bar-fill" data-level="90"></span></div>
+            </div>
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" loading="lazy" />
+              </div>
+              <span class="skills__name">Python</span>
+              <span class="skills__subtitle" data-i18n="level.basic">Basic</span>
+              <div class="skills__bar"><span class="skills__bar-fill" data-level="40"></span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!--==================== QUALIFICATION ====================-->
+    <section class="qualification section section__border" id="qualification">
+      <h2 class="section__title reveal" data-i18n="qualification.title">Credentials</h2>
+      <span class="section__subtitle reveal" data-i18n="qualification.subtitle">Experience &amp; Education</span>
+
+      <div class="qualification__container container grid">
+
+        <!-- Education -->
+        <div class="qualification__info reveal">
+          <div class="qualification__title">
+            <i class="bx bx-book"></i>
+            <span data-i18n="qualification.education">Education</span>
+          </div>
+          <div class="qualification__info">
+            <div>
+              <h3 class="qualification__name" data-i18n="edu1.name">Java Full Stack Jr. Bootcamp</h3>
+              <span class="qualification__country">Generation México</span>
+              <span class="qualification__year" data-i18n="edu1.year">March 2026 – June 2026</span>
+            </div>
+            <div>
+              <h3 class="qualification__name" data-i18n="edu6.name">Backend Developer Core Program</h3>
+              <span class="qualification__country">Tecmilenio - Monterrey</span>
+              <span class="qualification__year">2025</span>
+            </div>
+            <div>
+              <h3 class="qualification__name" data-i18n="edu5.name">Master's in Frontend Development with AI</h3>
+              <span class="qualification__country">DEV.F</span>
+              <span class="qualification__year">2024 – 2025</span>
+            </div>
+            <div>
+              <h3 class="qualification__name" data-i18n="edu2.name">PhD in Materials Science and Engineering</h3>
+              <span class="qualification__country" data-i18n="edu2.country">UNAM – Mexico City</span>
+              <span class="qualification__year">2021 – 2026</span>
+            </div>
+            <div>
+              <h3 class="qualification__name" data-i18n="edu7.name">MSc in Materials Science and Engineering</h3>
+              <span class="qualification__country" data-i18n="edu2.country">UNAM – Mexico City</span>
+              <span class="qualification__year">2019 – 2021</span>
+            </div>
+            <div>
+              <h3 class="qualification__name" data-i18n="edu3.name">B.Sc. in Mathematics</h3>
+              <span class="qualification__country" data-i18n="edu3.country">UNAM – Mexico City</span>
+              <span class="qualification__year">2016 – 2020</span>
+            </div>
+            <div>
+              <h3 class="qualification__name" data-i18n="edu4.name">B.Sc. in Technology</h3>
+              <span class="qualification__country" data-i18n="edu4.country">UNAM – Mexico City</span>
+              <span class="qualification__year">2013 – 2017</span>
+            </div>
+            
+            
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="qualification__info reveal">
+          <div class="qualification__title">
+            <i class="bx bx-briefcase"></i>
+            <span data-i18n="qualification.experience">Experience</span>
+          </div>
+          <div class="qualification__info">
+            <div>
+              <h3 class="qualification__name" data-i18n="exp1.name">Full Stack Developer – Almiux</h3>
+              <span class="qualification__country" data-i18n="exp1.country">Mexico City</span>
+              <span class="qualification__year" data-i18n="exp1.year">March 2026 – June 2026</span>
+            </div>
+            <div>
+              <h3 class="qualification__name" data-i18n="exp2.name">Backend Developer – TechnoReady</h3>
+              <span class="qualification__country" data-i18n="exp2.country">Mexico City</span>
+              <span class="qualification__year">Sep 2025 – Feb 2026</span>
+            </div>
+            <div>
+              <h3 class="qualification__name" data-i18n="exp3.name">Frontend Developer – MercArt</h3>
+              <span class="qualification__country" data-i18n="exp3.country">Mexico City</span>
+              <span class="qualification__year" data-i18n="exp3.year">Aug – Sep 2025</span>
+            </div>
+            <div>
+              <h3 class="qualification__name" data-i18n="exp4.name">Graduate Researcher – UNAM / IIM</h3>
+              <span class="qualification__country" data-i18n="exp4.country">Mexico City</span>
+              <span class="qualification__year">Aug 2021 – Dec 2025</span>
+            </div>
+            <div>
+              <h3 class="qualification__name" data-i18n="exp5.name">Museum Host - Light Museum Mexico City</h3>
+              <span class="qualification__country" data-i18n="exp5.country">Mexico City</span>
+              <span class="qualification__year" data-i18n="exp5.year">Feb 2018 – Oct 2018</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!--==================== SERVICES ====================-->
+    <section class="services section section__border" id="services">
+      <h2 class="section__title reveal" data-i18n="services.title">Services</h2>
+      <span class="section__subtitle reveal" data-i18n="services.subtitle">What I offer</span>
+
+      <div class="services__container container grid">
+        <div class="services__card reveal">
+          <i class="bx bxl-java"></i>
+          <h3 class="services__title" data-i18n="services.card1.title">Backend<br>Development</h3>
+          <p class="services__description" data-i18n="services.card1.desc">Robust REST APIs with Java and Spring Boot, following software architecture best practices.</p>
+          <div class="services__border"></div>
+        </div>
+        <div class="services__card reveal">
+          <i class="bx bxl-react"></i>
+          <h3 class="services__title" data-i18n="services.card2.title">Frontend<br>Development</h3>
+          <p class="services__description" data-i18n="services.card2.desc">Responsive, modern interfaces built with React, JavaScript, HTML and CSS.</p>
+          <div class="services__border"></div>
+        </div>
+        <div class="services__card reveal">
+          <i class="bx bx-transfer"></i>
+          <h3 class="services__title" data-i18n="services.card3.title">APIs &amp;<br>Integrations</h3>
+          <p class="services__description" data-i18n="services.card3.desc">Design, Swagger documentation and REST API consumption to connect systems.</p>
+          <div class="services__border"></div>
+        </div>
+        <div class="services__card reveal">
+          <i class="bx bx-test-tube"></i>
+          <h3 class="services__title" data-i18n="services.card4.title">Testing<br>&amp; QA</h3>
+          <p class="services__description" data-i18n="services.card4.desc">Unit testing with JUnit and Jest, coverage tracked with JaCoCo under quality standards.</p>
+          <div class="services__border"></div>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== PROJECTS ====================-->
+    <section class="projects section section__border" id="projects">
+      <h2 class="section__title reveal" data-i18n="projects.title">Projects</h2>
+      <span class="section__subtitle reveal" data-i18n="projects.subtitle">Most recent work</span>
+
+      <div class="projects__container container swiper">
+        <div class="swiper-wrapper">
+
+          <div class="projects__content swiper-slide">
+            <div class="project__preview">
+              <img src="images/Almiux.png" alt="Almiux Grocery Store" loading="lazy" />
+            </div>
+            <span class="projects__subtitle" data-i18n="p1.subtitle">Full Stack – E-Commerce</span>
+            <h3 class="projects__title" data-i18n="p1.title">Almiux – Grocery Store</h3>
+            <p class="projects__description" data-i18n="p1.desc">E-commerce web application for customizing and selling grocery products, with a dynamic catalog, shopping cart and user authentication.</p>
+            <div class="projects__tags">
+              <span class="projects__tag">HTML</span>
+              <span class="projects__tag">CSS</span>
+              <span class="projects__tag">Bootstrap</span>
+              <span class="projects__tag">JavaScript</span>
+              <span class="projects__tag">Jira / Scrum</span>
+            </div>
+            <div class="projects__buttons">
+            <a href="https://almiux-web.vercel.app/" target="_blank" rel="noopener noreferrer" class="projects__button">
+                <span data-i18n="projects.viewLive">View live</span> <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            <a href="https://github.com/rtkaleb/ALMIUX" target="_blank" rel="noopener noreferrer" class="projects__button">
+              <span data-i18n="projects.viewGithub">View on GitHub</span> <i class="bx bx-right-arrow-alt"></i>
+            </a>
+            </div>
+          </div>
+          
+
+          <div class="projects__content swiper-slide">
+            <div class="project__preview">
+              <img src="images/MercArt.png" alt="MercArt Web Platform" loading="lazy" />
+            </div>
+            <span class="projects__subtitle" data-i18n="p2.subtitle">Frontend – Art E-Commerce</span>
+            <h3 class="projects__title" data-i18n="p2.title">MercArt – Web Platform</h3>
+            <p class="projects__description" data-i18n="p2.desc">E-commerce platform built with a team using React and Scrum, consuming REST APIs with continuous deployment on Vercel.</p>
+            <div class="projects__tags">
+              <span class="projects__tag">React</span>
+              <span class="projects__tag">JavaScript</span>
+              <span class="projects__tag">REST APIs</span>
+              <span class="projects__tag">Vercel</span>
+              <span class="projects__tag">Scrum</span>
+            </div>
+            <div class="projects__buttons">
+              <a href="https://mercartfront.vercel.app/" target="_blank" rel="noopener noreferrer" class="projects__button">
+                <span data-i18n="projects.viewLive">View live</span> <i class="bx bx-right-arrow-alt"></i>
+              </a>
+              <a href="https://github.com/WebDesignC" target="_blank" rel="noopener noreferrer" class="projects__button">
+                <span data-i18n="projects.viewGithub">View on GitHub</span> <i class="bx bx-right-arrow-alt"></i>
+              </a>
+              </div>
+            </div>
+         
+
+          <div class="projects__content swiper-slide">
+            <div class="project__preview">
+              <img src="images/FYKA.png" alt="FYKA Web Platform" loading="lazy" />
+            </div>
+            <span class="projects__subtitle" data-i18n="p4.subtitle">Frontend – Art E-Commerce</span>
+            <h3 class="projects__title" data-i18n="p4.title">FYKA – Web Platform</h3>
+            <p class="projects__description" data-i18n="p4.desc">Sports e-commerce landing page built with a team using Scrum with continuous deployment on Vercel.</p>
+            <div class="projects__tags">
+              <span class="projects__tag">JavaScript</span>
+            
+              <span class="projects__tag">Vercel</span>
+              <span class="projects__tag">Scrum</span>
+            </div>
+            <div class="projects__buttons">
+              <a href="https://fyka-sport.vercel.app/" target="_blank" rel="noopener noreferrer" class="projects__button">
+                <span data-i18n="projects.viewLive">View live</span> <i class="bx bx-right-arrow-alt"></i>
+              </a>
+              <a href="https://github.com/FerZamu-byte/Landing_Page_room4" target="_blank" rel="noopener noreferrer" class="projects__button">
+                <span data-i18n="projects.viewGithub">View on GitHub</span> <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="projects__content swiper-slide">
+            <div class="project__preview">
+              <i class="bx bx-server"></i>
+            </div>
+            <span class="projects__subtitle" data-i18n="p3.subtitle">Backend – TechnoReady</span>
+            <h3 class="projects__title" data-i18n="p3.title">REST APIs with Java &amp; Spark</h3>
+            <p class="projects__description" data-i18n="p3.desc">4 end-to-end full-stack projects built with Java, Spring Boot and React. Unit testing with JUnit/Jest and coverage measured with JaCoCo.</p>
+            <div class="projects__tags">
+              <span class="projects__tag">Java</span>
+              <span class="projects__tag">Spring Boot</span>
+              <span class="projects__tag">JUnit</span>
+              <span class="projects__tag">Jest</span>
+              <span class="projects__tag">JaCoCo</span>
+            </div>
+            <a href="https://github.com/rtkaleb" target="_blank" rel="noopener noreferrer" class="projects__button">
+              <span data-i18n="projects.viewGithub">View on GitHub</span> <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+
+        </div>
+        <div class="swiper-button-next" role="button" tabindex="0" data-i18n-aria-label="projects.nextAria" aria-label="Next project"><i class="bx bx-chevron-right"></i></div>
+        <div class="swiper-button-prev" role="button" tabindex="0" data-i18n-aria-label="projects.prevAria" aria-label="Previous project"><i class="bx bx-chevron-left"></i></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!--==================== LANGUAGES ====================-->
+    <section class="section section__border" id="languages">
+      <h2 class="section__title reveal" data-i18n="languages.title">Languages</h2>
+      <span class="section__subtitle reveal" data-i18n="languages.subtitle">Global communication</span>
+
+      <div class="container">
+        <div class="languages__list reveal">
+          <div class="languages__item">
+            <i class="bx bx-globe" style="font-size:1.5rem; color:var(--first-color);"></i>
+            <div>
+              <span class="languages__name" data-i18n="lang.english">English</span><br>
+              <span class="languages__level" data-i18n="lang.english.level">C1 – Advanced</span>
+            </div>
+          </div>
+          <div class="languages__item">
+            <i class="bx bx-globe" style="font-size:1.5rem; color:var(--first-color);"></i>
+            <div>
+              <span class="languages__name" data-i18n="lang.french">French</span><br>
+              <span class="languages__level" data-i18n="lang.french.level">DELF B1 – Intermediate</span>
+            </div>
+          </div>
+          <div class="languages__item">
+            <i class="bx bx-globe" style="font-size:1.5rem; color:var(--first-color);"></i>
+            <div>
+              <span class="languages__name" data-i18n="lang.japanese">Japanese</span><br>
+              <span class="languages__level" data-i18n="lang.japanese.level">JLPT N5 – Basic</span>
+            </div>
+          </div>
+          <div class="languages__item">
+            <i class="bx bx-globe" style="font-size:1.5rem; color:var(--first-color);"></i>
+            <div>
+              <span class="languages__name" data-i18n="lang.spanish">Spanish</span><br>
+              <span class="languages__level" data-i18n="lang.spanish.level">Native</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== CONTACT ====================-->
+    <section class="contact section section__border" id="contact">
+      <h2 class="section__title reveal" data-i18n="contact.title">Contact</h2>
+      <span class="section__subtitle reveal" data-i18n="contact.subtitle">Get in touch with me</span>
+
+      <div class="contact__container container grid">
+
+        <div class="contact__info reveal">
+          <div class="contact__data">
+            <div class="contact__title">
+              <i class="bx bx-chat"></i>
+              <span data-i18n="contact.letsTalk">Let's talk</span>
+            </div>
+            <span class="contact__data-title" data-i18n="contact.email">Email</span>
+            <span class="contact__data-info">rtkaleb@gmail.com</span>
+            <a href="mailto:rtkaleb@gmail.com" class="contact__button">
+              <span data-i18n="contact.emailMe">Email me</span> <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+          <div class="contact__data">
+            <span class="contact__data-title" data-i18n="contact.linkedin">LinkedIn</span>
+            <span class="contact__data-info">Iván Kaleb Ramírez Torres</span>
+            <a href="https://www.linkedin.com/in/kaleb-torres/" target="_blank" rel="noopener noreferrer" class="contact__button">
+              <span data-i18n="contact.viewProfile">View profile</span> <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+          <div class="contact__data">
+            <span class="contact__data-title" data-i18n="contact.github">GitHub</span>
+            <span class="contact__data-info">github.com/rtkaleb</span>
+            <a href="https://github.com/rtkaleb" target="_blank" rel="noopener noreferrer" class="contact__button">
+              <span data-i18n="contact.viewRepos">View repositories</span> <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+
+        <!--
+          Formspree-powered form: replace YOUR_FORM_ID below with the ID
+          Formspree gives you after creating a free form at
+          https://formspree.io/forms (sign up with rtkaleb@gmail.com).
+          main.js submits this via fetch() and shows the message below
+          instead of reloading the page.
+        -->
+        <form class="contact__form grid reveal" id="contact-form" action="https://formspree.io/f/mjgqjypv" method="POST">
+          <!-- Honeypot field: hidden from real visitors via CSS, but bots
+               tend to fill every field. Formspree silently drops
+               submissions where "_gotcha" is non-empty. -->
+            <div class="contact__title">
+              <i class="bx bx-send"></i>
+              <span data-i18n="contact.formTitle">Tell me about your project</span>
+            </div>
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <div class="contact__form-div">
+            <label class="contact__form-tag" data-i18n="contact.form.name">Name</label>
+            <input type="text" name="name" placeholder="Your name" class="contact__form-input" required autocomplete="name" data-i18n-placeholder="contact.form.namePlaceholder" />
+          </div>
+          <div class="contact__form-div">
+            <label class="contact__form-tag" data-i18n="contact.form.email">Email</label>
+            <input type="email" name="email" placeholder="Your email" class="contact__form-input" required autocomplete="email" data-i18n-placeholder="contact.form.emailPlaceholder" />
+          </div>
+          <div class="contact__form-div contact__form-area">
+            <label class="contact__form-tag" data-i18n="contact.form.message">Message</label>
+            <textarea name="message" placeholder="Tell me about your project..." class="contact__form-input" required data-i18n-placeholder="contact.form.messagePlaceholder"></textarea>
+          </div>
+          <div>
+            <button type="submit" class="contact__button">
+              <span data-i18n="contact.form.send">Send message</span> <i class="bx bx-right-arrow-alt"></i>
+            </button>
+          </div>
+          <p class="contact__form-message" id="contact-form-message" role="status"></p>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!--==================== FOOTER ====================-->
+  <footer class="footer">
+    <div class="footer__container container">
+      <h1 class="footer__title">Kaleb Torres</h1>
+      <p style="font-size:var(--small-font-size); color:var(--text-color-light); margin-bottom:0.5rem;" data-i18n="footer.tagline">
+        Java Full Stack Jr. Developer
+      </p>
+      <ul class="footer__list">
+        <li><a href="#home"     class="footer__link" data-i18n="nav.home">Home</a></li>
+        <li><a href="#skills"   class="footer__link" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#projects" class="footer__link" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#contact"  class="footer__link" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <ul class="footer__social">
+        <li>
+          <a href="https://www.linkedin.com/in/kaleb-torres/" target="_blank" rel="noopener noreferrer" class="footer__social-link" data-i18n-aria-label="home.social.linkedinAria" aria-label="LinkedIn profile">
+            <i class="bx bxl-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/rtkaleb" target="_blank" rel="noopener noreferrer" class="footer__social-link" data-i18n-aria-label="home.social.githubAria" aria-label="GitHub profile">
+            <i class="bx bxl-github"></i>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:rtkaleb@gmail.com" class="footer__social-link" data-i18n-aria-label="footer.social.mailAria" aria-label="Send an email">
+            <i class="bx bx-envelope"></i>
+          </a>
+        </li>
+      </ul>
+      <span class="footer__copy" data-i18n="footer.copyright">© 2026 Iván Kaleb Ramírez Torres. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <!--==================== SCROLL UP ====================-->
+  <a href="#home" class="scrollup" id="scroll-up" data-i18n-aria-label="scrollup.aria" aria-label="Scroll back to top">
+    <i class="bx bx-up-arrow-alt"></i>
+  </a>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Translation dictionary (must load before main.js, which uses it) -->
+  <script src="translations.js"></script>
+  <!-- Own script -->
+  <script src="main.js"></script>
+</body>
+</html>
