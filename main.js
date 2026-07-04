@@ -50,6 +50,13 @@ function applyLanguage(lang) {
     if (dict[key] !== undefined) el.setAttribute('placeholder', dict[key]);
   });
 
+  // Language-specific files (e.g. the CV/resume PDF): each language has
+  // its own document, so swap the href instead of translating text.
+  document.querySelectorAll('[data-href-en][data-href-es]').forEach(el => {
+    const href = lang === 'es' ? el.dataset.hrefEs : el.dataset.hrefEn;
+    el.setAttribute('href', href);
+  });
+
   // Typing subtitle: swap its source text. If the typing animation has
   // already finished, this just replaces the visible text directly
   // rather than re-running the character-by-character effect.
